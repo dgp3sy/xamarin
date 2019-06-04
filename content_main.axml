@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+    <TextView
+        android:text="Enter Login Credentials:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:paddingBottom="30dp"
+        android:id="@+id/title" />
+    <TextView
+        android:text="Username: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:layout_below="@+id/title"
+        android:id="@+id/username" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="200dp"
+        android:layout_toRightOf="@+id/username"
+        android:layout_below="@+id/title"
+        android:id="@+id/username_textedit"/>
+    
+    <TextView
+        android:text="Password: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:id="@+id/password" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:paddingRight="200dp"
+        android:layout_below="@+id/username_textedit"
+        android:layout_toRightOf="@+id/password"
+        android:id="@+id/editText2" />
+
+</RelativeLayout>
