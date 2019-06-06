@@ -19,6 +19,7 @@ namespace NotePage.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
+
         //public Note Note { get; set; }
         //public IList<String> CourseList { get; set; }
 
@@ -29,28 +30,37 @@ namespace NotePage.Views
             BindingContext = viewModel = new ItemsViewModel();
         }
 
+
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
+            // cast to note 
+            var note = args.SelectedItem as Note;
+            // make sure not is not null
+            if (note == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            // passing selected note into item detail view model - push hierarchical navigation: navigating within the existing navigation page
+            await Navigation.PushModalAsync(new NavigationPage(new ItemDetailPage(new ItemDetailViewModel(note))));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
         }
 
+        
         async void AddItem_Clicked(object sender, EventArgs e)
         { // what happens when we create a new item
+            // push modal async - take the user to a page and makke the user perform a specific navigation in order to leave
+            // Modal navigation - moving outside of that navigation page
             await Navigation.PushModalAsync(new NavigationPage(new ItemDetailPage()));
-        }
+        }   
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+            // called just before the page is visible
+            base.OnAppearing(); 
 
-            if (viewModel.Items.Count == 0)
+            if (viewModel.Notes.Count == 0)
+                // if note collection is empty, populate it
                 viewModel.LoadItemsCommand.Execute(null);
         }
     }

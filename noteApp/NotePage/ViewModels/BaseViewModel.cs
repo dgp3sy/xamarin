@@ -7,12 +7,20 @@ using Xamarin.Forms;
 
 using NotePage.Models;
 using NotePage.Services;
+using NoteKeeper.Services;
 
 namespace NotePage.ViewModels
 {
+    // Implements INOTFIYPROPERYCHANGED interface
     public class BaseViewModel : INotifyPropertyChanged
     {
+        // Dependency service - allows the platform-specific projects to provide a feature implementation
+        // Cross-platform code can then access that implementation using the dependency service
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+
+        public IPluralsightDataStore PluralSightDataStore =>
+            DependencyService.Get<IPluralsightDataStore>() ?? new MockPluralsightDataStore();
+        // first check dependency service to see if there is a data store - if null we create a new instance
 
         bool isBusy = false;
         public bool IsBusy
@@ -41,10 +49,13 @@ namespace NotePage.ViewModels
             return true;
         }
 
+        // Code related to INotifyPropertyChanged Interface
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
+
+        // helper method handling the details for firing the event
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
+        { // this method can infer the name of the property that calls it (because of [CallerMemberName]
             var changed = PropertyChanged;
             if (changed == null)
                 return;

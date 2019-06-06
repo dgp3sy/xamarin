@@ -20,9 +20,9 @@
                 x:Name="NoteCourse" Title="Note Course" FontSize="Medium" >
 
         </Picker>
-        <Entry Text="{Binding Heading}" FontSize="Medium" 
+        <Entry Text="{Binding NoteHeading}" FontSize="Medium" 
                Placeholder="Note Heading" x:Name="NoteHeading" />
-        <Editor Text="{Binding Text}" x:Name="NoteText" AutoSize="TextChanges" 
+        <Editor Text="{Binding Note.Text}" x:Name="NoteText" AutoSize="TextChanges" 
                 Placeholder="Note Text" FontSize="Medium"/>
     </StackLayout>
     

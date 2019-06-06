@@ -9,10 +9,13 @@
             x:Class="NotePage.Views.MainPage">
 
     <MasterDetailPage.Master>
+        <!--Slide out menu page-->
         <views:MenuPage />
     </MasterDetailPage.Master>
 
+    <!-- Main part of the screen: where we present the current page -->
     <MasterDetailPage.Detail>
+        <!-- provides the ability for the user to travel from one page to the next using a stack-->
         <NavigationPage>
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -20,6 +23,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
+                <!-- Items page: first thing the user sees -->
                 <views:ItemsPage />
             </x:Arguments>
         </NavigationPage>
