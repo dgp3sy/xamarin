@@ -1,0 +1,14 @@
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\bin\Debug\netstandard2.0\BethanysPieStockApp.deps.json
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\bin\Debug\netstandard2.0\BethanysPieStockApp.dll
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\bin\Debug\netstandard2.0\ref\BethanysPieStockApp.dll
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\bin\Debug\netstandard2.0\BethanysPieStockApp.pdb
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\BethanysPieStockApp.csproj.CoreCompileInputs.cache
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\BethanysPieStockApp.AssemblyInfoInputs.cache
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\BethanysPieStockApp.AssemblyInfo.cs
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\BethanysPieStockApp.dll
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\ref\BethanysPieStockApp.dll
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\BethanysPieStockApp.pdb
+C:\Users\danny.perkins\source\repos\BethanysPieStockApp\BethanysPieStockApp\BethanysPieStockApp\obj\Debug\netstandard2.0\ViewBindingPage.xaml.g.cs

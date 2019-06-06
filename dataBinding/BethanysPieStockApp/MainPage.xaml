@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Model="clr-namespace:BethanysPieStockApp.Model"
+             mc:Ignorable="d"
+             x:Class="BethanysPieStockApp.MainPage">
+ <!--   <ContentPage.Resources>
+        <ResourceDictionary>
+             COMMENT: In general, we wont be able to declare our instances of data like this in XAML
+            <Model:Pie Id="1" PieName="Apple Pie" Price="20" x:Key="ApplePie"></Model:Pie>
+        </ResourceDictionary>
+    </ContentPage.Resources> -->
+    <Grid Margin="20, 50, 20, 10" x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Pie name" ></Label>
+        <Entry Grid.Row="0" Grid.Column="1" x:Name="NameEntry"
+               Text="{Binding PieName}"></Entry>
+        <Label Grid.Row="1" Grid.Column="0" Text="Price"></Label>
+        <!--We Dont know what we are binding to, so this will refer to 
+                its parent (Grid) to see if that has a binding context: MainGrid
+                has a binding context (defined in the MainPage.xaml.cs file-->
+        <Entry Grid.Row="1" Grid.Column="1" x:Name="PriceEntry"
+               Text="{Binding Price}"></Entry>
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Add Pie"></Button>
+    </Grid>
+
+
+
+</ContentPage>
