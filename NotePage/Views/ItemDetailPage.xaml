@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NotePage.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <!-- Cancel_Clicked is convention for name of method-->
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked"/>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Spacing="20" Padding="15">
+        <!--set item source betfore selected item -->
+        <!--picker's binding context is Note, so we have to go for the Course within the note property-->
+        <Picker ItemsSource="{Binding CourseList}"
+                SelectedItem="{Binding Note.Course}" 
+                x:Name="NoteCourse" Title="Note Course" FontSize="Medium" >
+
+        </Picker>
+        <Entry Text="{Binding NoteHeading}" FontSize="Medium" 
+               Placeholder="Note Heading" x:Name="NoteHeading" />
+        <Editor Text="{Binding Note.Text}" x:Name="NoteText" AutoSize="TextChanges" 
+                Placeholder="Note Text" FontSize="Medium"/>
+    </StackLayout>
+    
+</ContentPage>
